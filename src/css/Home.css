@@ -1,0 +1,110 @@
+:root {
+    /* Light Theme Colors */
+    --bg-color: rgb(232, 224, 224);
+    --text-color: black;
+    --button-bg: rgb(3, 179, 227);
+    --button-text: white;
+    --border-color: rgb(81, 29, 29);
+    --input-bg: rgb(255, 255, 255);
+}
+
+[data-theme="dark"] {
+    /* Dark Theme Colors */
+    --bg-color: rgb(34, 34, 34);
+    --text-color: white;
+    --button-bg: rgb(197, 75, 75);
+    --button-text: black;
+    --border-color: rgb(144, 144, 144);
+    --input-bg: rgb(50, 50, 50);
+}
+
+.home {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: .5vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+.intro {
+    position: relative;
+    background: url('https://wallpapers.com/images/featured/hollywood-street-6uwepl0fopxlec1w.jpg') no-repeat center center;
+    background-size: cover;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    overflow: hidden;
+  }
+  
+  .intro::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgb(3, 179, 227, .7); /* Change this to any color and opacity */
+    z-index: 1;
+  }
+
+  .introText{
+    z-index: 2;
+  }
+
+.searchform {
+    z-index: 2;
+    width: 100vw;
+    margin-top: 8vh;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.searchinput {
+    height: 5vh;
+    width: 70vw;
+    background-color: var(--input-bg);
+    border: 2px solid transparent;
+    border-right: none;
+    border-radius: 1vw;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    color: var(--text-color);
+}
+input:focus {
+    outline: none;
+  }
+
+.submitbutton {
+    height: auto;
+    width: auto;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: 2px solid transparent;
+    border-radius: 1vw;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+}
+
+.moviesgrid {
+    height: auto;
+    width: 100vw;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+@media (max-width: 550px) {
+    .moviesgrid {
+        overflow-x: auto; /* Prevent horizontal scroll */
+    }
+}

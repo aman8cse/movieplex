@@ -1,0 +1,66 @@
+:root {
+    /* Light Theme Colors */
+    --bg-color: beige;
+    --text-color: black;
+    --button-bg: rgb(156, 69, 59);
+    --button-text: white;
+    --border-color: grey;
+    --input-bg: rgb(246, 246, 233);
+    --poster-bg: azure;
+    --fav-btn-bg: white;
+    --fav-btn-border: black;
+}
+
+[data-theme="dark"] {
+    /* Dark Theme Colors */
+    --bg-color: rgb(34, 34, 34);
+    --text-color: white;
+    --button-bg: rgb(91, 45, 45);
+    --button-text: black;
+    --border-color: rgb(144, 144, 144);
+    --input-bg: rgb(50, 50, 50);
+    --poster-bg: rgb(44, 44, 44);
+    --fav-btn-bg: rgb(60, 60, 60);
+    --fav-btn-border: white;
+}
+
+.moviecard {
+    flex: 0 0 auto;
+    height: 45vh;
+    width: 30vh;
+    border: 1px solid var(--border-color);
+    border-radius: 2vh;
+    margin-inline: 2vw;
+    margin-top: 5vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.movieposter {
+    width: 100%;
+    height: 100%; /* Matches your layout */
+    display: flex; /* Ensures proper alignment */
+    align-items: center; /* Centers vertically if needed */
+    justify-content: center; /* Centers horizontally if needed */
+    overflow: hidden; /* Prevents any overflow */
+    background-color: var(--poster-bg);
+    border-radius: 2vh;
+}
+
+.movieposter img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures full image fits without distortion */
+}
+
+
+@media (max-width: 550px) {
+    .moviecard {
+        width: 40vh; /* Let the width adjust automatically */
+        height: 60vh; /* Adjust height for smaller screens */
+        margin-inline: 2vh; /* Adjust spacing */
+        margin-bottom: 8vh;
+        background-color: var(--bg-color);
+    }
+    
+}

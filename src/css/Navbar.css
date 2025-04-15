@@ -1,0 +1,99 @@
+:root {
+    /* Light Theme Colors */
+    --navbar-bg: rgb(3, 37, 65);
+    --navbar-text: white;
+}
+
+[data-theme="dark"] {
+    /* Dark Theme Colors */
+    --navbar-bg: rgb(145, 27, 27);
+    --navbar-text: rgb(231, 231, 231);
+}
+
+.navbar {
+    width: 100vw;
+    height: 8vh;
+    background-color: var(--navbar-bg);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1vw;
+}
+
+.logo {
+    font-size: 3vw;
+}
+
+.navbarbrand {
+    display: flex;
+    align-items: center;
+    margin: 5vw;
+    color: var(--navbar-text);
+}
+
+.options{
+    width: 22vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.navbarlinks {
+    margin: 8vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navlink {
+    margin: 2vw;
+    color: var(--navbar-text);
+    text-decoration: none;
+}
+
+.navbar p, .navlink{
+    border: 1px solid transparent;
+    padding: 1;
+}
+
+.navbar p:hover, .navlink:hover{
+    border: 1px solid white;
+    border-radius: 15%;
+}
+
+.theme:hover {
+    cursor: pointer;
+}
+
+.theme:active {
+    animation: anime 3s infinite;
+}
+
+@keyframes anime {
+    50% {
+        color: beige;
+    }
+
+    100% {
+        color: red;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .logo {
+        font-size: 3vh;
+    }
+    .navbar{
+        font-size: 1.2vh;
+    }
+    .options{
+        width: 33vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .navbarlinks{
+        margin-left: .5%;
+    }
+}
