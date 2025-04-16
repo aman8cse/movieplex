@@ -4,8 +4,21 @@ import { useState, useEffect } from "react";
 import {searchMovies, getPopularMovies} from "../services/api";
 import MovieCard from "../Components/MovieCard";
 import Footer from "../Components/footer";
+import typeSec from "../Components/typeSec";
 
 function Home () {
+    const type = "Trending";
+    const typeOptions = ["Today, This Week"];
+
+    const type0 = "Latest Trailers";
+    const typeOptions0 = ["Popular, Streaming, OnTV For Rent In Theaters"];
+
+    const type2 = "What's Popular";
+    const typeOptions2 = ["Streaming, On TV, For Rent, In Theaters"];
+
+    const type3 = "Free To Watch";
+    const typeOptions3 = ["Movies, TV"];
+
     const [searchQuery, setSearchQuery] = useState("");
 
     const [movies, setMovies] = useState([]);
@@ -50,15 +63,49 @@ function Home () {
                     </form>
                 </div>
             </div>
-            <div className="moviesgrid">
+            <div className="contentBox">
+                <div className="typeSec">
+                <div className="type">{type}</div>
+                <div className="typeOptions">{typeOptions}</div>
+             </div>
+             <div className="moviesgrid">
                 {movies.map((movie) => (
                     <MovieCard movie = {movie} key = {movie.id}/>
                 ))}
+             </div>
             </div>
-            <div className="moviesgrid">
+            <div className="contentBox">
+                <div className="typeSec">
+                <div className="type">{type0}</div>
+                <div className="typeOptions">{typeOptions0}</div>
+             </div>
+             <div className="moviesgrid">
                 {movies.map((movie) => (
                     <MovieCard movie = {movie} key = {movie.id}/>
                 ))}
+             </div>
+            </div>
+            <div className="contentBox">
+                <div className="typeSec">
+                <div className="type">{type2}</div>
+                <div className="typeOptions">{typeOptions2}</div>
+             </div>
+               <div className="moviesgrid">
+                {movies.map((movie) => (
+                    <MovieCard movie = {movie} key = {movie.id}/>
+                ))}
+               </div>
+            </div>
+            <div className="contentBox">
+                <div className="typeSec">
+                <div className="type">{type3}</div>
+                <div className="typeOptions">{typeOptions3}</div>
+             </div>
+             <div className="moviesgrid">
+                {movies.map((movie) => (
+                    <MovieCard movie = {movie} key = {movie.id}/>
+                ))}
+             </div>
             </div>
             <Footer></Footer>
         </div>
