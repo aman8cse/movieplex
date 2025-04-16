@@ -73,7 +73,7 @@ function Home () {
                     <p>Polular</p>
                     <p>Streaming</p>
                     <p>On TV</p>
-                    <p>For Rent</p>
+                    <p>ForRent</p>
                     <p>InTheaters</p>
                 </div>
              </div>
@@ -89,7 +89,7 @@ function Home () {
                 <div className="typeOptions">
                     <p>Streaming</p>
                     <p>On TV</p>
-                    <p>For Rent</p>
+                    <p>ForRent</p>
                     <p>InTheaters</p>
                 </div>
              </div>

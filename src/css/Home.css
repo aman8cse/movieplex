@@ -68,7 +68,7 @@
 
 .searchinput {
     height: 5vh;
-    width: 70vw;
+    width: 80vw;
     background-color: var(--input-bg);
     border: 2px solid transparent;
     border-right: none;
@@ -94,9 +94,9 @@ input:focus {
 
 .moviesgrid {
     position: relative;
-    margin-left: 10vw;
-    height: auto;
-    width: 100vw;
+    height: 40vh;
+    margin-left: 3vw;
+    width: 95vw;
     background-color: none;
     display: flex;
     flex-direction: row;

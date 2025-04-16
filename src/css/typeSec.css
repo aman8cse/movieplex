@@ -12,7 +12,7 @@
 .typeSec{
     display: flex;
     align-items: center;
-    margin-left: 10vw;
+    margin-left: 3vw;
 }
 
 .type{
@@ -25,17 +25,16 @@
     height: 3vh;
     border: .3vh solid rgb(3, 37, 65);
     border-radius: 3vh;
-    overflow: hidden;
 }
 
 .typeOptions div, .typeOptions p{
-    padding: 2vw;
+    padding-inline: 1vw;
     height: 100%;
     width: 100%;
-    border-top-right-radius: 3%;
-    border-bottom-right-radius: 3%;
+    border-radius: 5vw;
 }
 
 .typeOptions div:hover, .typeOptions p:hover{
-    background-color: rgb(3, 179, 227, .7);
+    color: rgb(3, 179, 227, .7);
+    background-color: rgb(3, 37, 65);
 }
