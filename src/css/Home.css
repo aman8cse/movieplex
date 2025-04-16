@@ -93,15 +93,30 @@ input:focus {
 }
 
 .moviesgrid {
+    position: relative;
+    margin-left: 10vw;
     height: auto;
     width: 100vw;
-    background-color: var(--bg-color);
+    background-color: none;
     display: flex;
     flex-direction: row;
     overflow: auto;
     scroll-behavior: smooth;
     white-space: nowrap;
 }
+
+.contentBox0{
+    background: url('https://wallpapers.com/images/featured/hollywood-street-6uwepl0fopxlec1w.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.contentBox0::before {
+    content: "";
+    position: relative;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgb(3, 179, 227, .7); /* Change this to any color and opacity */
+    z-index: 1;
+  }
 
 @media (max-width: 550px) {
     .moviesgrid {

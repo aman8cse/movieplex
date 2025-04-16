@@ -1,3 +1,7 @@
+*{
+    color: rgb(3, 37, 65);
+}
+
 .contentBox{
     display: flex;
     flex-direction: column;
@@ -7,10 +11,31 @@
 
 .typeSec{
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 10vw;
+}
+
+.type{
+    margin-inline: 2vw;
 }
 
 .typeOptions{
+    display: flex;
+    align-items: center;
+    height: 3vh;
     border: .3vh solid rgb(3, 37, 65);
-    border-radius: 8vh;
+    border-radius: 3vh;
+    overflow: hidden;
+}
+
+.typeOptions div, .typeOptions p{
+    padding: 2vw;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 3%;
+    border-bottom-right-radius: 3%;
+}
+
+.typeOptions div:hover, .typeOptions p:hover{
+    background-color: rgb(3, 179, 227, .7);
 }

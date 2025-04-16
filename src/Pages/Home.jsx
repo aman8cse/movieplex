@@ -7,17 +7,6 @@ import Footer from "../Components/footer";
 import typeSec from "../Components/typeSec";
 
 function Home () {
-    const type = "Trending";
-    const typeOptions = ["Today, This Week"];
-
-    const type0 = "Latest Trailers";
-    const typeOptions0 = ["Popular, Streaming, OnTV For Rent In Theaters"];
-
-    const type2 = "What's Popular";
-    const typeOptions2 = ["Streaming, On TV, For Rent, In Theaters"];
-
-    const type3 = "Free To Watch";
-    const typeOptions3 = ["Movies, TV"];
 
     const [searchQuery, setSearchQuery] = useState("");
 
@@ -65,8 +54,28 @@ function Home () {
             </div>
             <div className="contentBox">
                 <div className="typeSec">
-                <div className="type">{type}</div>
-                <div className="typeOptions">{typeOptions}</div>
+                <div className="type"><h2>Trending</h2></div>
+                <div className="typeOptions">
+                    <p>Today</p>
+                    <p>ThisWeek</p>
+                </div>
+             </div>
+             <div className="moviesgrid">
+                {movies.map((movie) => (
+                    <MovieCard movie = {movie} key = {movie.id}/>
+                ))}
+             </div>
+            </div>
+            <div className="contentBox contentBox0">
+                <div className="typeSec">
+                <div className="type"><h2>Latest Trailers</h2></div>
+                <div className="typeOptions">
+                    <p>Polular</p>
+                    <p>Streaming</p>
+                    <p>On TV</p>
+                    <p>For Rent</p>
+                    <p>InTheaters</p>
+                </div>
              </div>
              <div className="moviesgrid">
                 {movies.map((movie) => (
@@ -76,19 +85,13 @@ function Home () {
             </div>
             <div className="contentBox">
                 <div className="typeSec">
-                <div className="type">{type0}</div>
-                <div className="typeOptions">{typeOptions0}</div>
-             </div>
-             <div className="moviesgrid">
-                {movies.map((movie) => (
-                    <MovieCard movie = {movie} key = {movie.id}/>
-                ))}
-             </div>
-            </div>
-            <div className="contentBox">
-                <div className="typeSec">
-                <div className="type">{type2}</div>
-                <div className="typeOptions">{typeOptions2}</div>
+                <div className="type">What's Popular</div>
+                <div className="typeOptions">
+                    <p>Streaming</p>
+                    <p>On TV</p>
+                    <p>For Rent</p>
+                    <p>InTheaters</p>
+                </div>
              </div>
                <div className="moviesgrid">
                 {movies.map((movie) => (
@@ -98,8 +101,11 @@ function Home () {
             </div>
             <div className="contentBox">
                 <div className="typeSec">
-                <div className="type">{type3}</div>
-                <div className="typeOptions">{typeOptions3}</div>
+                <div className="type"><h2>Free To Watch</h2></div>
+                <div className="typeOptions">
+                    <p>Movies</p>
+                    <p>TV</p>
+                </div>
              </div>
              <div className="moviesgrid">
                 {movies.map((movie) => (
